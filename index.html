@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Banco XYZ</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- Página de Login -->
+  <div class="login-container" id="loginPage">
+    <h1>Banco XYZ</h1>
+    <input type="text" id="usuario" placeholder="Usuario" />
+    <input type="password" id="clave" placeholder="Contraseña" />
+    <button onclick="login()">Ingresar</button>
+    <button onclick="register()">Registrarse</button>
+    <p class="olvide">¿Olvidaste tu contraseña?</p>
+  </div>
+
+  <!-- Página de Saldo -->
+  <div class="saldo-container" id="saldoPage" style="display: none;">
+    <h1>¡Bienvenido!</h1>
+
+    <div class="container-cards">
+      <!-- Tarjeta Cuenta Principal -->
+      <div class="card">
+        <div class="card-header">
+          <p>Cuenta Principal</p>
+        </div>
+
+        <div class="saldo">
+          <p class="saldo-monto">$5,000.00</p>
+          <p class="saldo-texto">Saldo</p>
+          <span class="flecha" onclick="verMas('principal')">&#8594;</span>
+        </div>
+      </div>
+
+      <!-- Tarjeta Cuenta de Ahorros -->
+      <div class="card">
+        <div class="card-header">
+          <p>Cuenta de Ahorros</p>
+        </div>
+
+        <div class="saldo">
+          <p class="saldo-monto">$0.00</p>
+          <p class="saldo-texto">Saldo</p>
+          <span class="flecha" onclick="verMas('ahorros')">&#8594;</span>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn-operaciones" onclick="irOperaciones()">Operaciones</button>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
